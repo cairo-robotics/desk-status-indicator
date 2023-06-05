@@ -8,14 +8,16 @@ Arduino project to indicate whether you are free to chat. Developed by Emily.
 - Turn off the device by unplugging from your computer
 
 # Making changes
-You can add more functionality by changing the software loaded onto the device.
-- Install the [Arduino IDE](https://www.arduino.cc/en/software)
-- Clone this repo
-- Open this repo in the Arduino IDE
-- Connect your board to your computer with the USB cable
-- Add a new script to this repo with your desired changes
-- Upload your new script to the board
-- It should automatically update and run while your device is plugged in.
+You can add more functionality by changing the software loaded onto the device. Instructions adapted from [here](https://www.hackster.io/shilleh/how-to-use-vscode-with-raspberry-pi-pico-w-and-micropython-de88d6)
+
+- Plug board into computer using micro USB cable and holding down the `bootsel` button.
+- Download the latest firmware from [MicroPython](https://micropython.org/download/rp2-pico/). Save the `.uf2` file to the Pico device that shows up on your computer.
+- Unplug board from computer.
+- Replug board into computer *without* holding down the `bootsel` button.
+- Install `Pico-W-Go` extension in VSCode
+- In the `pico-project` directory, run `Pico-W-Go > Configure Project` using the VSCode command palette (bring this up using `Ctrl+Shift+P`)
+- Create a new python script in the directory and add your code. 
+- To upload your code to the board, right click the file and select `Run current file`.
 
 # Wiring diagrams
 These diagrams are using the Arduino Uno, which is not the final controller to be used in this project.
